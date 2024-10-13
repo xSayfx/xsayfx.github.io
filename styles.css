@@ -1,0 +1,280 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Tajawal', sans-serif;
+  background: linear-gradient(135deg, #1c073e, #03142c);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+    width: 90%;
+    max-width: 900px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+}
+
+.project-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-list li {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.project-info {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.project-info h3 {
+  margin: 0;
+  color: #3a1c71;
+  font-size: 1.2rem;
+}
+
+.project-info p {
+  margin: 5px 0 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.project-image {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-image:hover img {
+  transform: scale(1.1);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover, .close:focus {
+  color: black;
+}
+
+.project-modal-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.modal-navigation {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+/* Image Navigation Buttons */
+.nav-left, .nav-right {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.nav-left:hover, .nav-right:hover {
+  background-color: rgb(102, 102, 102, 0.7);
+}
+
+.project-details {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.more-info {
+  background-color: #3a1c71;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.more-info:hover {
+  background-color: #5c3c8a;
+  transform: scale(1.05);
+}
+
+/* More Info Modal */
+.more-info-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more-info-modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  max-width: 500px;
+  width: 80%;
+}
+
+.close-more-info {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-more-info:hover, .close-more-info:focus {
+  color: black;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+}
+
+/* Scrollbar Styles */
+.container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+/* Hide modals by default */
+.modal,
+.more-info-modal {
+  display: none;
+}
+/* Student Info Modal */
+.student-info-modal {
+    display: none; /* مخفية بشكل افتراضي */
+    position: fixed;
+    z-index: 1001; /* أعلى من أي عنصر آخر */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* خلفية داكنة مع شفافية */
+    display: flex; /* استخدم flex لتوسيع المحتوى في المركز */
+    justify-content: center; /* محاذاة المحتوى في الوسط أفقيًا */
+    align-items: center; /* محاذاة المحتوى في الوسط عموديًا */
+}
+
+.student-info-modal-content {
+    background-color: white; /* خلفية بيضاء للنافذة */
+    padding: 20px; /* مسافة داخلية */
+    border-radius: 8px; /* زوايا مدورة */
+    position: relative; /* لتحديد موقع زر الإغلاق */
+    max-width: 500px; /* الحد الأقصى للعرض */
+    width: 90%; /* عرض النافذة */
+}
+
+.close-student-info {
+    position: absolute; /* زر الإغلاق */
+    top: 10px;
+    right: 10px;
+    color: #aaa; /* لون للزر */
+    font-size: 28px; /* حجم الخط */
+    font-weight: bold; /* خط عريض */
+    cursor: pointer; /* تغيير المؤشر عند التمرير */
+}
+
+.close-student-info:hover, .close-student-info:focus {
+    color: black; /* تغيير اللون عند التمرير */
+}

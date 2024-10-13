@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Project's</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+</head>
+<body>
+    <div class="container">
+        <h1>قائمة المشاريع</h1>
+        <ul class="project-list">
+            <li onclick="openModal('project1')">
+                <div class="project-info">
+                    <h3>المحاليل القاعدية</h3>
+                    <p>علوم</p>
+                </div>
+                <div class="project-image">
+                    <img src="images/محاليل_قاعدية_1.png" alt="Project 1">
+                </div>
+            </li>
+            <li onclick="openModal('project2')">
+                <div class="project-info">
+                    <h3>Artificial Intelligence</h3>
+                    <p>English</p>
+                </div>
+                <div class="project-image">
+                    <img src="images/Ai_1.png" alt="Project 2">
+                </div>
+            </li>
+            
+            <!-- أضف المزيد من المشاريع هنا -->
+        </ul>
+        <footer>&copy; سيف اسماعيل دياب</footer>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="project-modal-image">
+                <img id="modal-image" src="" alt="Project Image">
+                <div class="modal-navigation">
+                    <button class="nav-left" onclick="changeImage(-1)">&#10094;</button> <!-- زر اليسار -->
+                    <button class="nav-right" onclick="changeImage(1)">&#10095;</button> <!-- زر اليمين -->
+                </div>
+            </div>
+            <div class="project-details">
+                <h2 id="modal-title"></h2>
+                <h3 id="modal-subject"></h3>
+                <button class="more-info" onclick="openMoreInfo()">معلومات أكثر</button>
+            </div>
+           <!--- <footer>عمل الطالب سيف اسماعيل</footer> --->
+        </div>
+    </div>
+
+    <!-- More Info Modal -->
+    <div class="more-info-modal" id="more-info-modal">
+        <div class="more-info-modal-content">
+            <span class="close-more-info" onclick="closeMoreInfo()">&times;</span>
+            <h2 style="text-align: center;">معلومات عن المشروع</h2>
+            <p id="more-info-content" style="text-align: right;">هنا يمكنك إضافة معلومات عن المشروع الذي تختاره.</p>
+        </div>
+    </div>
+    <!-- Student Info Modal -->
+    <div class="student-info-modal" id="student-info-modal">
+        <div class="student-info-modal-content">
+            <span class="close-student-info" onclick="closeStudentInfo()">&times;</span>
+            <h2 style="text-align: center;">معلومات عن الطالب</h2>
+            <p id="student-info-content" style="text-align: right;">
+                كل شيء هنا من عمل الطالب سيف اسماعيل دياب
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
