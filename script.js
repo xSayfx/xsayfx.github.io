@@ -3,7 +3,7 @@ const projects = {
     //title: "اسم المشروع 1",
     //subject: "اسم المادة 1",
       info: "الطالب : سيف اسماعيل دياب | الفصل : 2/3 | التاريخ : 2024/10/13", // This line adds an info property
-    images: ["محاليل_قاعدية_/https://xsayfx.github.io/.png", "https://xsayfx.github.io/محاليل_قاعدية_2.png"],
+    images: ["https://xsayfx.github.io/محاليل_قاعدية_1.png", "https://xsayfx.github.io/محاليل_قاعدية_2.png"],
   },
   project2: {
     //title: "اسم المشروع 2",
