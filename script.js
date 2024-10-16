@@ -1,12 +1,12 @@
 const projects = {
   project1: {
     info: "الطالب : سيف اسماعيل دياب | الفصل : 2/3 | التاريخ : 2024/10/13",
-    images: ["https://xsayfx.github.io/محاليل_قاعدية_1.png", "https://xsayfx.github.io/محاليل_قاعدية_2.png"],
+    images: ["images/محاليل_قاعدية_1.png", "images/محاليل_قاعدية_2.png"],
     download: "https://533df286-d0a7-4a12-9264-4a30b11117f2-00-7er3pnbj6iy4.worf.replit.dev/project.zip", // Replace with your actual download link
   },
   project2: {
     info: "الطالب : سيف اسماعيل دياب | الفصل : 2/3 | التاريخ : 2024/10/13",
-    images: ["https://xsayfx.github.io/Ai_1.png", "https://xsayfx.github.io/Ai_2.png"],
+    images: ["images/Ai_1.png", "images/Ai_2.png"],
     download: "https://533df286-d0a7-4a12-9264-4a30b11117f2-00-7er3pnbj6iy4.worf.replit.dev/project.zip", // Replace with your actual download link
   },
   // ... more projects ...
@@ -33,7 +33,7 @@ function openModal(projectId) {
 }
 
 function closeModal() {
-  document.getElementById('modal').style.display = 'none';
+    window.location.href = "about:blank"; 
 }
 
 function changeImage(direction) {
