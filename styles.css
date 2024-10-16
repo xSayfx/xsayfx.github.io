@@ -278,3 +278,59 @@ footer {
 .close-student-info:hover, .close-student-info:focus {
     color: black; /* تغيير اللون عند التمرير */
 }
+/* ... your existing CSS ... */
+
+.download-project {
+  background-color: #3a1c71; /* Green */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-project:hover {
+  background-color: #5c3c8a; /* Darker green */
+  transform: scale(1.05);
+}
+
+/* ... the rest of your CSS ... */
+/* ... your existing CSS ... */
+
+.project-details button {
+    margin: 10px; /* Add some spacing between the buttons */
+}
+
+.more-info {
+    /* Add any specific styles you want for the "More Info" button */
+}
+
+.download-project {
+    /* Add any specific styles you want for the "Download" button */
+}
+/* ... your existing CSS ... */
+
+.button-container {
+    display: flex; /* Use flexbox for centering and spacing */
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 10px; /* Add space between the buttons */
+}
+
+.download-page-button { /* Use a specific class for the button in download.html */
+    background-color: #3a1c71; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center; /* Center the text inside the button */
+}
+
+.download-page-button:hover {
+    background-color: #5c3c8a; /* Darker green */
+    transform: scale(1.05);
+}
+
+/* ... your existing CSS ... */
