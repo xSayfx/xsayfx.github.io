@@ -6,7 +6,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Project's</title>
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="container">
@@ -18,7 +19,10 @@
                     <p>علوم</p>
                 </div>
                 <div class="project-image">
-                    <img src="محاليل_قاعدية_1.png" alt="Project 1">
+                    <img src="/محاليل_قاعدية_1.png" alt="Project 1">
+                </div>
+                <div class="project-details">
+                    <!-- Download button will be inside the modal -->
                 </div>
             </li>
             <li onclick="openModal('project2')">
@@ -27,15 +31,19 @@
                     <p>English</p>
                 </div>
                 <div class="project-image">
-                    <img src="Ai_1.png" alt="Project 2">
+                    <img src="/Ai_1.png" alt="Project 2">
+                </div>
+                <div class="project-details">
+                    <!-- Download button will be inside the modal -->
                 </div>
             </li>
-            
-            <!-- أضف المزيد من المشاريع هنا -->
+            <!-- ... more projects ... -->
         </ul>
         <footer>&copy; سيف اسماعيل دياب</footer>
     </div>
 
+
+    
     <!-- Modal -->
     <div class="modal" id="modal">
         <div class="modal-content">
@@ -50,7 +58,9 @@
             <div class="project-details">
                 <h2 id="modal-title"></h2>
                 <h3 id="modal-subject"></h3>
+                 <!-- Download button inside the modal -->
                 <button class="more-info" onclick="openMoreInfo()">معلومات أكثر</button>
+                <button class="download-project" onclick="downloadProject()">تحميل المشروع</button> 
             </div>
            <!--- <footer>عمل الطالب سيف اسماعيل</footer> --->
         </div>
@@ -70,11 +80,10 @@
             <span class="close-student-info" onclick="closeStudentInfo()">&times;</span>
             <h2 style="text-align: center;">معلومات عن الطالب</h2>
             <p id="student-info-content" style="text-align: right;">
-                كل شيء، بما فيه التصميم والبرمجة والمشاريع من الطالب سيف اسماعيل دياب 
+                كل شيء هنا من عمل الطالب سيف اسماعيل دياب
             </p>
         </div>
     </div>
 
-    <script src="script.js"></script>
 </body>
 </html>
