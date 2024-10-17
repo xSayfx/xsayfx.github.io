@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
     <title>قائمة المشاريع</title>
     <link rel="icon" type="image/x-icon" href="/favicon.png">
 </head>
@@ -54,11 +55,18 @@
 
     <div class="notifications-tab" id="notificationsTab">
         <button class="notifications-button" onclick="toggleNotifications()">
-            <div class="notification-ring"></div>
+            <i class="bi bi-bell-fill"></i>
             <span class="notification-count" id="notificationCount">0</span>
         </button>
         <div class="notifications-content" id="notificationsContent">
-            <ul></ul>
+            <ul>
+                <li>
+                    <h3>عنوان الإشعار</h3>
+                    <p>محتوى الإشعار</p>
+                    <small>منذ 5 دقائق</small>
+                </li>
+                <!-- المزيد من الإشعارات -->
+            </ul>
         </div>
     </div>
 
