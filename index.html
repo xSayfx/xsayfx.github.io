@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,8 @@
     <link rel="stylesheet" href="styles.css">
     <title>Project's</title>
     <link rel="icon" type="image/x-icon" href="/favicon.png">
-    <script src="script.js"></script>
 </head>
+
 <body>
     <div class="container">
         <h1>قائمة المشاريع</h1>
@@ -21,9 +22,6 @@
                 <div class="project-image">
                     <img src="/محاليل_قاعدية_1.png" alt="Project 1">
                 </div>
-                <div class="project-details">
-                    <!-- Download button will be inside the modal -->
-                </div>
             </li>
             <li onclick="openModal('project2')">
                 <div class="project-info">
@@ -33,40 +31,40 @@
                 <div class="project-image">
                     <img src="/Ai_1.png" alt="Project 2">
                 </div>
-                <div class="project-details">
-                    <!-- Download button will be inside the modal -->
-                </div>
             </li>
-            <!-- ... more projects ... -->
         </ul>
         <footer>&copy; سيف اسماعيل دياب</footer>
     </div>
 
+    <div class="notifications-tab" id="notificationsTab">
+        <button class="notifications-button" onclick="toggleNotifications()">
+            <div class="notification-ring"></div>
+            <span class="notification-count" id="notificationCount">0</span>
+        </button>
+        <div class="notifications-content" id="notificationsContent">
+            <ul></ul>
+        </div>
+    </div>
 
-    
-    <!-- Modal -->
     <div class="modal" id="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <div class="project-modal-image">
                 <img id="modal-image" src="" alt="Project Image">
                 <div class="modal-navigation">
-                    <button class="nav-left" onclick="changeImage(-1)">&#10094;</button> <!-- زر اليسار -->
-                    <button class="nav-right" onclick="changeImage(1)">&#10095;</button> <!-- زر اليمين -->
+                    <button class="nav-left" onclick="changeImage(-1)">&#10094;</button>
+                    <button class="nav-right" onclick="changeImage(1)">&#10095;</button>
                 </div>
             </div>
             <div class="project-details">
                 <h2 id="modal-title"></h2>
                 <h3 id="modal-subject"></h3>
-                 <!-- Download button inside the modal -->
                 <button class="more-info" onclick="openMoreInfo()">معلومات أكثر</button>
-                <button class="download-project" onclick="downloadProject()">تحميل المشروع</button> 
+                <button class="download-project" onclick="downloadProject()">تحميل المشروع</button>
             </div>
-           <!--- <footer>عمل الطالب سيف اسماعيل</footer> --->
         </div>
     </div>
 
-    <!-- More Info Modal -->
     <div class="more-info-modal" id="more-info-modal">
         <div class="more-info-modal-content">
             <span class="close-more-info" onclick="closeMoreInfo()">&times;</span>
@@ -74,7 +72,7 @@
             <p id="more-info-content" style="text-align: right;">هنا يمكنك إضافة معلومات عن المشروع الذي تختاره.</p>
         </div>
     </div>
-    <!-- Student Info Modal -->
+
     <div class="student-info-modal" id="student-info-modal">
         <div class="student-info-modal-content">
             <span class="close-student-info" onclick="closeStudentInfo()">&times;</span>
@@ -85,5 +83,7 @@
         </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
+
 </html>
