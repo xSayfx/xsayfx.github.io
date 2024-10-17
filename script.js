@@ -17,7 +17,7 @@ project3: {
       //title: "المحاليل القاعدية",
       //subject: "علوم",
       info: "الطالب : سيف اسماعيل دياب | الفصل : 2/3 | التاريخ : 2024/10/5",
-      images: ["https://xsayfx.github.io/"],
+      images: ["https://xsayfx.github.io/excelmain.png"],
       download: "https://xsayfx.github.io/‪مشروع رقمية.xlsx",
   },
  };
