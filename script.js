@@ -15,14 +15,14 @@ const projects = {
   },
 project3: {
       //title: "مشروع الوحدة الاولى",
-      //subject: "رقمية"
+      subject: "يجب تنزيل المشروع",
       info: "الطالب : سيف اسماعيل دياب | الفصل : 2/3 | التاريخ : 2024/10/5",
       images: ["https://xsayfx.github.io/excelmain.png"],
       download: "https://xsayfx.github.io/‪مشروع رقمية.xlsx",
   },
 project4: {
       //title: "مشروع الوحدة الثانية",
-      //subject: "رقمية"
+      subject: "يجب تنزيل المشروع",
       info: "الطالب : سيف اسماعيل دياب | الفصل : 2/3 | التاريخ : 2024/10/5",
       images: ["https://xsayfx.github.io/docx.png"],
       download: "https://xsayfx.github.io/‪مشروع_الوحدة_الثانية_رقمية.docx",
