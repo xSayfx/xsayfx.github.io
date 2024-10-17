@@ -334,3 +334,111 @@ footer {
 }
 
 /* ... your existing CSS ... */
+/* ... your existing CSS ... */
+
+/* Notification button fixed in the top-right */
+.notifications-tab {
+  position: fixed;
+  top: 20px; /* Adjust the distance from the top */
+  right: 20px; /* Adjust the distance from the right */
+  z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+/* Styling the notifications button */
+.notifications-button {
+  position: relative;
+  padding: 10px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.notification-ring {
+  width: 12px;
+  height: 12px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.notification-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  display: none; /* Will be shown only when there are unread notifications */
+}
+
+/* Notification dropdown content */
+.notifications-content {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 50px; /* Adjust so it doesn't overlap the button */
+  right: 0;
+  max-height: 200px; /* Set the maximum height for scrolling */
+  width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px;
+}
+
+/* Special scrollbar styling */
+.notifications-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.notifications-content::-webkit-scrollbar-thumb {
+  background-color: #3a1c71; /* Custom color for the scrollbar */
+  border-radius: 10px;
+}
+
+.notifications-content::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Notification items */
+.notifications-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.notifications-content li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.notifications-content li h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.notifications-content li p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.notifications-content li small {
+  display: block;
+  font-size: 12px;
+  color: #999;
+}
+
+/* Show the notification dropdown when the button is clicked */
+.notifications-tab.active .notifications-content {
+  display: block;
+}
