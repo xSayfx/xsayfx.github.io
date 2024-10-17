@@ -108,7 +108,7 @@ function downloadProject() {
 
 // Notifications handling
 const notifications = {
-ntf3: { name: "اشعار", details: "بيتم اضافة قائمة لتسجيل دخول المعلمين", date: "2024-10-17" },
+ntf4: { name: "اشعار", details: "بيتم اضافة قائمة لتسجيل دخول المعلمين", date: "2024-10-17" },
   ntf3: { name: "تحديث", details: "تم تحديث شكل خانة الاشعارات بالكامل", date: "2024-10-17 | v1.22" },
   ntf2: { name: "تحديث", details: "اضافة ميزة جديدة : امكانية تحميل المشروع", date: "2024-10-17 | v1.21" },
   ntf1: { name: "تحديث", details: "اضافة ميزة جديدة : اشعارات", date: "2024-10-17 | v1.20" },
