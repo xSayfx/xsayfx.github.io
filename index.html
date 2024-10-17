@@ -1,80 +1,94 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <title>قائمة المشاريع</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
-  <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>قائمة المشاريع</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
 </head>
 <body>
-  <div class="container">
-    <h1>قائمة المشاريع</h1>
-    <ul class="project-list">
-      <li onclick="openModal('project1')">
-        <div class="project-info">
-          <h3>المحاليل القاعدية</h3>
-          <p>علوم</p>
-        </div>
-        <div class="project-image">
-          <img src="images/محاليل_قاعدية_1.png" alt="Project 1">
-        </div>
-        <div class="project-details"></div>
-      </li>
-      <li onclick="openModal('project2')">
-        <div class="project-info">
-          <h3>Artificial Intelligence</h3>
-          <p>English</p>
-        </div>
-        <div class="project-image">
-          <img src="images/Ai_1.png" alt="Project 2">
-        </div>
-        <div class="project-details"></div>
-      </li>
-    </ul>
-    <footer>&copy; سيف اسماعيل دياب</footer>
-  </div>
-
-  <!-- إشعارات -->
-  <div class="notifications-tab">
-    <button class="notifications-button">
-      <i class="bi bi-bell-fill"></i>
-      <span class="notification-count">3</span> <!-- العدد هنا يمكن تغييره حسب عدد الإشعارات -->
-    </button>
-    <div class="notifications-content">
-      <ul>
-        <li>
-          <h3>عنوان الإشعار</h3>
-          <p>محتوى الإشعار</p>
-          <small>منذ 5 دقائق</small>
-        </li>
-        <!-- المزيد من الإشعارات -->
-      </ul>
+    <div class="container">
+        <h1>قائمة المشاريع</h1>
+        <ul class="project-list">
+            <li onclick="openModal('project1')" class="project-item">
+                <div class="project-info">
+                    <h3>المحاليل القاعدية</h3>
+                    <p>علوم</p>
+                </div>
+                <div class="project-image">
+                    <img src="/محاليل_قاعدية_1.png" alt="Project 1">
+                </div>
+            </li>
+            <li onclick="openModal('project2')" class="project-item">
+                <div class="project-info">
+                    <h3>Artificial Intelligence</h3>
+                    <p>English</p>
+                </div>
+                <div class="project-image">
+                    <img src="/Ai_1.png" alt="Project 2">
+                </div>
+            </li>
+            <li onclick="openModal('project4')" class="project-item">
+                <div class="project-info">
+                    <h3>مشروع الوحدة الثانية</h3>
+                    <p>المهارات الرقمية</p>
+                </div>
+                <div class="project-image">
+                    <img src="/docx.png" alt="Project 4">
+                </div>
+            </li>
+            <li onclick="openModal('project3')" class="project-item">
+                <div class="project-info">
+                    <h3>مشروع الوحدة الاولى</h3>
+                    <p>المهارات الرقمية</p>
+                </div>
+                <div class="project-image">
+                    <img src="/excel.png" alt="Project 3">
+                </div>
+            </li>
+        </ul>
+        <footer>&copy; سيف اسماعيل دياب</footer>
     </div>
-  </div>
 
-  <!-- نافذة المشروع -->
-  <div class="modal" id="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <div class="project-modal-image">
-        <img id="modal-image" src="" alt="Project Image">
-        <div class="modal-navigation">
-          <button class="nav-left" onclick="changeImage(-1)">&#10094;</button>
-          <button class="nav-right" onclick="changeImage(1)">&#10095;</button>
+    <div class="notifications-tab" id="notificationsTab">
+        <button class="notifications-button" onclick="toggleNotifications()">
+            <div class="notification-ring"></div>
+            <span class="notification-count" id="notificationCount">0</span>
+        </button>
+        <div class="notifications-content" id="notificationsContent">
+            <ul></ul>
         </div>
-      </div>
-      <div class="project-details">
-        <h2 id="modal-title"></h2>
-        <h3 id="modal-subject"></h3>
-        <button class="more-info" onclick="openMoreInfo()">معلومات أكثر</button>
-        <button class="download-project" onclick="downloadProject()">تحميل المشروع</button>
-      </div>
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="project-modal-image">
+                <img id="modal-image" src="" alt="Project Image">
+                <div class="modal-navigation">
+                    <button class="nav-left" onclick="changeImage(-1)">&#10094;</button>
+                    <button class="nav-right" onclick="changeImage(1)">&#10095;</button>
+                </div>
+            </div>
+            <div class="project-details">
+                <h2 id="modal-title"></h2>
+                <h3 id="modal-subject"></h3>
+                <button class="more-info" onclick="openMoreInfo()">معلومات أكثر</button>
+                <button class="download-project" onclick="downloadProject()">تحميل المشروع</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="more-info-modal" id="more-info-modal">
+        <div class="more-info-modal-content">
+            <span class="close-more-info" onclick="closeMoreInfo()">&times;</span>
+            <h2 style="text-align: center;">معلومات عن المشروع</h2>
+            <p id="more-info-content" style="text-align: right;">هنا يمكنك إضافة معلومات عن المشروع الذي تختاره.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
