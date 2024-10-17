@@ -4,14 +4,14 @@ const projects = {
       //subject: "علوم",
       info: "الطالب : سيف اسماعيل دياب | الفصل : 2/3 | التاريخ : 2024/10/13",
       images: ["https://xsayfx.github.io/محاليل_قاعدية_1.png", "https://xsayfx.github.io/محاليل_قاعدية_2.png"],
-      download: "https://533df286-d0a7-4a12-9264-4a30b11117f2-00-7er3pnbj6iy4.worf.replit.dev/project.zip",
+      download: "https://xsayfx.github.io/المحاليل_القاعدية.pdf",
   },
   project2: {
       //title: "Artificial Intelligence",
       //subject: "English",
       info: "الطالب : سيف اسماعيل دياب | الفصل : 2/3 | التاريخ : 2024/10/13",
       images: ["https://xsayfx.github.io/Ai_1.png", "https://xsayfx.github.io/Ai_2.png"],
-      download: "https://533df286-d0a7-4a12-9264-4a30b11117f2-00-7er3pnbj6iy4.worf.replit.dev/project.zip",
+      download: "https://xsayfx.github.io/Ai.pdf",
   },
 };
 
