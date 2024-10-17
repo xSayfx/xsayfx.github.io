@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
-    <title>قائمة المشاريع</title>
+    <title>Project's</title>
     <link rel="icon" type="image/x-icon" href="/favicon.png">
 </head>
 <body>
@@ -58,7 +58,7 @@
             <i class="bi bi-bell-fill"></i>
             <span class="notification-count" id="notificationCount">0</span>
         </button>
-        <div class="notifications-content" id="notificationsContent">
+        <div class="notifications-content" id="notificationsContent" style="display: none;">
             <ul>
                 <li>
                     <h3>عنوان الإشعار</h3>
@@ -98,5 +98,15 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        function toggleNotifications() {
+            const notificationsContent = document.getElementById('notificationsContent');
+            if (notificationsContent.style.display === 'none') {
+                notificationsContent.style.display = 'block';
+            } else {
+                notificationsContent.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
