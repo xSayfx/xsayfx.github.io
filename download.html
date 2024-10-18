@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"> 
-    <script src="script.js" defer></script>
-    <title>تم التنزيل</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.png">
-</head>
-<body>
-    <div class="container">
-        <h1 style="text-align: right;">! تم تنزيل المشروع بنجاح</h1>
-        <p style="text-align: right;">. يمكنك الآن العثور على ملف المشروع في مجلد التنزيلات</p>
-        <div class="button-container">  <!-- Add a container for the buttons -->
-            <button onclick="window.location.href='https://google.com/'" class="download-page-button">إغلاق</button>
-            <!--- <button onclick="window.close()" class="download-page-button">إغلاق</button> --->
-            <button onclick="window.location.href='index.html'" class="download-page-button">العودة إلى الصفحة الرئيسية</button> 
-        </div>
-        <footer>&copy; سيف اسماعيل دياب</footer>  <!-- Footer inside the container -->
-    </div>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <title>تم التنزيل</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+  <style>
+    /* يمكنك إضافة المزيد من الأنماط هنا */
+    #countdown span {
+      color: purple;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 style="text-align: right;">! تم تنزيل المشروع بنجاح</h1>
+    <p style="text-align: right;">. يمكنك الآن العثور على ملف المشروع في مجلد التنزيلات</p>
+    <p id="countdown" style="text-align: right;"></p>
+    <div class="button-container">
+      <button onclick="window.location.href='https://google.com/'" class="download-page-button">إغلاق</button>
+      <button onclick="window.location.href='index.html'" class="download-page-button">العودة إلى الصفحة الرئيسية</button>
+    </div>
+    <footer>&copy; سيف اسماعيل دياب</footer>
+    </div>
+  <script>
+    let timeleft = 15;
+    let downloadTimer = setInterval(function () {
+      if (timeleft <= 0) {
+        clearInterval(downloadTimer);
+        window.location.href = 'index.html';
+      } else {
+        document.getElementById("countdown").innerHTML = "سيتم توجيهك للصفحة الرئيسية تلقائياً بعد <span>" + timeleft + "</span> ثواني";
+      }
+      timeleft -= 1;
+    }, 1000);
+  </script>
 </body>
+
 </html>
