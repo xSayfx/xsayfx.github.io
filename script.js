@@ -110,6 +110,7 @@ function downloadProject() {
 
 // Notifications handling
 const notifications = {
+    ntf6: { name: "اشعار", details: "تم اضافة مشروع لمادة المهارات الرقمية", date: "2024-10-18" },
     ntf5: { name: "تحديث", details: "تم تحديث واجهة المستخدم وايضاً خانة وزر الاشعارات", date: "2024-10-18 | v1.30" },
     ntf4: { name: "اشعار", details: "بيتم تحديث واضافة ميزات غداً", date: "2024-10-17" },
     ntf3: { name: "تحديث", details: "تم تحديث شكل خانة الاشعارات بالكامل", date: "2024-10-17 | v1.22" },
