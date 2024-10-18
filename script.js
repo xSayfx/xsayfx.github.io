@@ -22,6 +22,12 @@ const projects = {
         images: ["https://xsayfx.github.io/docx.png"],
         download: "https://xsayfx.github.io/‪مشروع_الوحدة_الثانية_رقمية.docx",
     },
+ project5: {
+        subject: "تطبيق يعمل على الكمبيوتر | يجب تنزيل المشروع",
+        info: "الطالب : سيف اسماعيل دياب | الفصل : 2/3 | التاريخ : 2024/10/18",
+        images: ["https://xsayfx.github.io/calcmain.png"],
+        download: "https://xsayfx.github.io/CalcBySayf.exe",
+    },
 };
 
 let currentProject = '';
