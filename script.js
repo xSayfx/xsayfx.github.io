@@ -26,7 +26,7 @@ const projects = {
         subject: "تطبيق يعمل على الكمبيوتر | يجب تنزيل المشروع",
         info: "الطالب : سيف اسماعيل دياب | الفصل : 2/3 | التاريخ : 2024/10/18",
         images: ["https://xsayfx.github.io/calcmain.png"],
-        download: "https://xsayfx.github.io/CBS.rar",
+        download: "https://xsayfx.github.io/CalcBySayf.rar",
     },
 };
 
