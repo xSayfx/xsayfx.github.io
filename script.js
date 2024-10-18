@@ -127,30 +127,31 @@ function toggleNotifications() {
     notificationsContent.style.display = isNotificationsOpen ? 'block' : 'none';
 }
 
-// إضافة الإشعارات إلى الواجهة
 function addNotificationsToUI() {
-  const notificationList = notificationsContent.querySelector("ul");
-  let unreadCount = 0;
+    const notificationList = notificationsContent.querySelector("ul");
+    notificationList.innerHTML = ''; // Clear existing notifications
+    let unreadCount = 0;
+    for (const notificationId in notifications) {
+        const notification = notifications[notificationId];
+        const li = document.createElement("li");
+        li.innerHTML = `<h3>${notification.name}</h3><p>${notification.details}</p><small>${notification.date}</small>`;
+        notificationList.appendChild(li);
+        unreadCount++;
+    }
 
-  for (const notificationId in notifications) {
-    const notification = notifications[notificationId];
-    const li = document.createElement("li");
-    li.innerHTML = `<h3>${notification.name}</h3><p>${notification.details}</p><small>${notification.date}</small>`;
-    notificationList.appendChild(li);
-    unreadCount++;
-  }
-
-  notificationCount.textContent = unreadCount;
-  notificationCount.style.display = unreadCount > 0 ? "inline-block" : "none";
+    notificationCount.textContent = unreadCount;
+    notificationCount.style.display = unreadCount > 0 ? "block" : "none";
 }
-
-// التبديل بين عرض وإخفاء قائمة الإشعارات
-notificationsButton.addEventListener('click', function() {
-  notificationsTab.classList.toggle('active');
-});
 function closeDownloadModal() {
-  window.location.href = "about:blank"; 
+    if (window.open('', '_self').close) {
+        // Close the window if it's allowed
+        window.close();
+    } else {
+        // Redirect to a blank page if closing is not allowed
+        window.location.href = "about:blank";
+    }
 }
-// استدعاء دالة إضافة الإشعارات عند تحميل الصفحة
-addNotificationsToUI();
-
+ 
+    }
+// Event listener for the notifications button
+document.querySelector('.notifications-button').addEventListener('click', toggleNotifications);
