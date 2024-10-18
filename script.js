@@ -152,6 +152,6 @@ function closeDownloadModal() {
     }
 }
  
-    }
+    
 // Event listener for the notifications button
 document.querySelector('.notifications-button').addEventListener('click', toggleNotifications);
