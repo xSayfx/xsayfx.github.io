@@ -127,26 +127,30 @@ function toggleNotifications() {
     notificationsContent.style.display = isNotificationsOpen ? 'block' : 'none';
 }
 
+// إضافة الإشعارات إلى الواجهة
 function addNotificationsToUI() {
-    const notificationList = notificationsContent.querySelector("ul");
-    notificationList.innerHTML = ''; // Clear existing notifications
-    let unreadCount = 0;
-    for (const notificationId in notifications) {
-        const notification = notifications[notificationId];
-        const li = document.createElement("li");
-        li.innerHTML = `<h3>${notification.name}</h3><p>${notification.details}</p><small>${notification.date}</small>`;
-        notificationList.appendChild(li);
-        unreadCount++;
-    }
+  const notificationList = notificationsContent.querySelector("ul");
+  let unreadCount = 0;
 
-    notificationCount.textContent = unreadCount;
-    notificationCount.style.display = unreadCount > 0 ? "block" : "none";
+  for (const notificationId in notifications) {
+    const notification = notifications[notificationId];
+    const li = document.createElement("li");
+    li.innerHTML = `<h3>${notification.name}</h3><p>${notification.details}</p><small>${notification.date}</small>`;
+    notificationList.appendChild(li);
+    unreadCount++;
+  }
+
+  notificationCount.textContent = unreadCount;
+  notificationCount.style.display = unreadCount > 0 ? "inline-block" : "none";
 }
+
+// التبديل بين عرض وإخفاء قائمة الإشعارات
+notificationsButton.addEventListener('click', function() {
+  notificationsTab.classList.toggle('active');
+});
 function closeDownloadModal() {
-      window.location.href = "about:blank";
-    }
+  window.location.href = "about:blank"; 
 }
-}
-    
-// Event listener for the notifications button
-document.querySelector('.notifications-button').addEventListener('click', toggleNotifications);
+// استدعاء دالة إضافة الإشعارات عند تحميل الصفحة
+addNotificationsToUI();
+
