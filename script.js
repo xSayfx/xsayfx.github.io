@@ -110,6 +110,7 @@ function downloadProject() {
 
 // Notifications handling
 const notifications = {
+    ntf7: { name: "تحديث", details: "تم اصلاح مشاكل عامة, ايضاً اضافة ميزة اعادة توجية تلقائياً", date: "2024-10-18 | v1.31" },
     ntf6: { name: "اشعار", details: "تم اضافة مشروع لمادة المهارات الرقمية", date: "2024-10-18" },
     ntf5: { name: "تحديث", details: "تم تحديث واجهة المستخدم وايضاً خانة وزر الاشعارات", date: "2024-10-18 | v1.30" },
     ntf4: { name: "اشعار", details: "بيتم تحديث واضافة ميزات غداً", date: "2024-10-17" },
