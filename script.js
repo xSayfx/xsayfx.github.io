@@ -142,9 +142,9 @@ function addNotificationsToUI() {
     notificationCount.textContent = unreadCount;
     notificationCount.style.display = unreadCount > 0 ? "block" : "none";
 }
-
- function closeDownloadModal() {
-      window.location.href = "about:blank"; 
     }
 // Event listener for the notifications button
 document.querySelector('.notifications-button').addEventListener('click', toggleNotifications);
+
+function closeDownloadModal() {
+      window.location.href = "about:blank"; 
