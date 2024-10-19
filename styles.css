@@ -191,6 +191,7 @@ h2, h3 {
   width: 80%;
   max-height: 90vh;
   overflow-y: auto;
+  overflow: visible;
 }
 
 .night-mode .close {
@@ -778,11 +779,11 @@ body.night-mode .notifications-tab.active .notifications-content {
 
 
 .notifications-button {
-  font-size: 1.6em;  /* Adjust this value to match the desired size */
-  padding: 8px 12px; /* Adjust this value if needed */
+  font-size: 1.4em;  /* Adjust this value to match the desired size */
+  padding: 6px 12px; /* Adjust this value if needed */
 }
 .mode-switch {
-  font-size: 2em;  /* Adjust this value to match the desired size */
+  font-size: 1.6em;  /* Adjust this value to match the desired size */
   padding: 5px 12px; /* Adjust this value if needed */
 }
 .night-mode .modal-content {
