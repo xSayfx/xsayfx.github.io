@@ -781,11 +781,11 @@ body.night-mode .notifications-tab.active .notifications-content {
 
 
 .notifications-button {
-  font-size: 1.4em;  /* Adjust this value to match the desired size */
+  font-size: 1.5em;  /* Adjust this value to match the desired size */
   padding: 6px 12px; /* Adjust this value if needed */
 }
 .mode-switch {
-  font-size: 1.6em;  /* Adjust this value to match the desired size */
+  font-size: 1.8em;  /* Adjust this value to match the desired size */
   padding: 5px 12px; /* Adjust this value if needed */
 }
 .night-mode .modal-content {
