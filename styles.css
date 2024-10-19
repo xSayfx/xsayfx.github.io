@@ -29,17 +29,21 @@ h1,
 }
 
 .night-mode .container,
-.night-mode .project-list li,
 .night-mode h1,
-.night-mode .project-details,
-.night-mode .modal-content,
 .night-mode .more-info-modal-content,
 .night-mode .notifications-content {
   background-color: #000000; /* Dark background for elements in night mode */
   color: #eee; /* White text color for elements in night mode */
 }
+.night-mode .button-container,
+.night-mode .project-details,
+.night-mode .project-list li,
 .night-mode .more-info-modal-content {
-  background-color: #0f0f0f;
+  background-color: #0a0a0a;
+  color: #0a0a0a; 
+}
+.night-mode .modal-content {
+  background-color: #0a0a0a;
   color: #eee; 
 }
 .night-mode .notifications-content {
@@ -324,18 +328,24 @@ h2, h3 {
 
   /* Scrollbar Styles */
   .container::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
   }
 
   .container::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 10px;
+    background: #bdbdbd;
+    border-radius: 8px;
   }
 
-  .container::-webkit-scrollbar-thumb:hover {
-    background: #aaa;
-  }
+  
+/* Scrollbar Styles */
+.night-mode .container::-webkit-scrollbar {
+  width: 8px;
+}
 
+.night-mode .container::-webkit-scrollbar-thumb {
+  background: #383838;
+  border-radius: 8px;
+}
   /* Hide modals by default */
   .modal,
   .more-info-modal {
@@ -430,7 +440,7 @@ h2, h3 {
     /* Use flexbox for centering and spacing */
     justify-content: center;
     /* Center the buttons horizontally */
-    gap: 10px;
+    gap: 8px;
     /* Add space between the buttons */
   }
 
@@ -549,16 +559,17 @@ body.night-mode .notifications-tab.active .notifications-content {
     padding: 0;
   }
 .modal-content::-webkit-scrollbar {
-  width: 8px; /* عرض شريط التمرير */
+  width: 8px; /* جعل شريط التمرير أنحف */
 }
 
+
 .modal-content::-webkit-scrollbar-track {
-  background: #f1f1f1; /* لون خلفية المسار */
+  background: #858585; /* لون خلفية المسار */
 }
 
 .modal-content::-webkit-scrollbar-thumb {
-  background: #888; /* لون شريط التمرير */
-  border-radius: 8px; /* تقريب زوايا شريط التمرير */
+  background: #666; /* جعل لون شريط التمرير أغمق */
+  border-radius: 8px;
 }
 
 .modal-content::-webkit-scrollbar-thumb:hover {
