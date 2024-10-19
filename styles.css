@@ -19,7 +19,6 @@ body.night-mode {
 
 .container,
 .project-list li,
-h1,
 .project-details,
 .modal-content,
 .more-info-modal-content,
@@ -55,7 +54,6 @@ h1,
 /* Morning Mode Styles (when not in night mode) */
 .container,
 .project-list li,
-h1,
 .project-details,
 .modal-content,
 .more-info-modal-content {
@@ -146,6 +144,16 @@ h1 {
 }
 h2, h3 {
   color: #3a1c71 !important;
+}
+h1 {
+  background: linear-gradient(to right, #3a1c71, #673AB7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.night-mode {
+  background: linear-gradient(135deg, #4100b3, #1d5263);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .project-image {
   display: flex;
