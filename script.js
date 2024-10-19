@@ -7,7 +7,7 @@ const projects = {
     project2: {
 //title
         info: "الطالب : سيف اسماعيل دياب | الفصل : 2/3 | التاريخ : 2024/10/13",
-        images: ["https://xsayfx.github.io/Ai_1.png", "https://xsayfx.github.io/Ai_2.png"],
+        images: ["https://xsayfx.github.io/AiNew_1.png", "https://xsayfx.github.io/AiNew_2.png"],
         download: "https://xsayfx.github.io/Ai.zip",
     },
     project3: {
