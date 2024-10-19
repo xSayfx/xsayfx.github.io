@@ -191,10 +191,23 @@ h2, h3 {
   border-radius: 8px;
   position: relative;
   max-width: 800px;
-  width: 90%;
+  width: 80%;
   max-height: 90vh;
   overflow-y: auto;
-  overflow: hidden;
+}
+
+.night-mode .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #b5b5b5;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.night-mode .close:hover, .close:focus {
+  color: white;
 }
 
 .close {
@@ -761,9 +774,11 @@ body.night-mode .notifications-tab.active .notifications-content {
   }
 
   .night-mode .mode-switch i:before {
-
+    content: "\F496"; /* Moon-stars icon */
+    font-family: 'Bootstrap Icons';
     /* Use moon-stars icon for night mode */
   }
+
 
 .notifications-button {
   font-size: 2em;  /* Adjust this value to match the desired size */
