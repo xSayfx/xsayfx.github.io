@@ -336,7 +336,7 @@ h2, h3 {
     border-radius: 8px;
   }
 
-  
+
 /* Scrollbar Styles */
 .night-mode .container::-webkit-scrollbar {
   width: 8px;
@@ -761,6 +761,15 @@ body.night-mode .notifications-tab.active .notifications-content {
   }
 
   .night-mode .mode-switch i:before {
-    content: "\F185";
+
     /* Use moon-stars icon for night mode */
   }
+
+.notifications-button {
+  font-size: 2em;  /* Adjust this value to match the desired size */
+  padding: 8px 12px; /* Adjust this value if needed */
+}
+.mode-switch {
+  font-size: 2.2em;  /* Adjust this value to match the desired size */
+  padding: 8px 12px; /* Adjust this value if needed */
+}
