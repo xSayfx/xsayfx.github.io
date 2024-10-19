@@ -41,7 +41,18 @@ body.night-mode {
   background-color: #0a0a0a;
   color: #0a0a0a; 
 }
-
+.night-mode .button-container-download {
+  background-color: #000000;
+  color: #0a0a0a; 
+}
+.button-container-download {
+  display: flex;
+  /* Use flexbox for centering and spacing */
+  justify-content: center;
+  /* Center the buttons horizontally */
+  gap: 8px;
+  /* Add space between the buttons */
+}
 .night-mode .notifications-content {
   background-color: #0a0a0a;
   color: #eee; 
@@ -54,6 +65,7 @@ body.night-mode {
 /* Morning Mode Styles (when not in night mode) */
 .container,
 .project-list li,
+h1,
 .project-details,
 .modal-content,
 .more-info-modal-content {
@@ -145,15 +157,9 @@ h1 {
 h2, h3 {
   color: #3a1c71 !important;
 }
+
 h1 {
-  background: linear-gradient(to right, #3a1c71, #673AB7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.night-mode {
-  background: linear-gradient(135deg, #4100b3, #1d5263);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: linear-gradient(135deg, #4100b3, #1d5263);
 }
 .project-image {
   display: flex;
@@ -816,4 +822,14 @@ body.night-mode .notifications-tab.active .notifications-content {
 .project-modal-image img {
   max-width: 90%; /* Limit the maximum width of the image */
   max-height: 70vh; /* Limit the maximum height of the image */
+}
+h1 {
+  background: linear-gradient(to right, #3a1c71, #673AB7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.night-mode h1 {
+  background: linear-gradient(135deg, #4100b3, #1d5263);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
