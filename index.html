@@ -13,7 +13,7 @@
     <div class="container">
         <h1>قائمة المشاريع</h1>
         <ul class="project-list">
-        <li onclick="openModal('project5')" class="project-item">
+            <li onclick="openModal('project5')" class="project-item">
                 <div class="project-info">
                     <h3>مشروع الوحدة الثالثة</h3>
                     <p>المهارات الرقمية</p>
@@ -21,6 +21,7 @@
                 <div class="project-image">
                     <img src="/calc.png" alt="Project 5">
                 </div>
+            </li>
             <li onclick="openModal('project1')" class="project-item">
                 <div class="project-info">
                     <h3>المحاليل القاعدية</h3>
@@ -61,6 +62,7 @@
         <footer>&copy; سيف اسماعيل دياب</footer>
     </div>
 
+    <!-- Notifications Tab -->
     <div class="notifications-tab" id="notificationsTab">
         <button class="notifications-button" onclick="toggleNotifications()">
             <i class="bi bi-bell-fill"></i>
@@ -73,11 +75,18 @@
                     <p>محتوى الإشعار</p>
                     <small>منذ 5 دقائق</small>
                 </li>
-                <!-- المزيد من الإشعارات -->
             </ul>
         </div>
     </div>
 
+    <!-- Dark Mode Switch -->
+    <div class="dark-mode-toggle">
+        <button class="mode-switch" aria-label="Toggle dark mode">
+            <i class="bi bi-sun"></i>
+        </button>
+    </div>
+
+    <!-- Modal Section -->
     <div class="modal" id="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -97,6 +106,7 @@
         </div>
     </div>
 
+    <!-- More Info Modal -->
     <div class="more-info-modal" id="more-info-modal">
         <div class="more-info-modal-content">
             <span class="close-more-info" onclick="closeMoreInfo()">&times;</span>
@@ -105,16 +115,7 @@
         </div>
     </div>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
-    <script>
-        function toggleNotifications() {
-            const notificationsContent = document.getElementById('notificationsContent');
-            if (notificationsContent.style.display === 'none') {
-                notificationsContent.style.display = 'block';
-            } else {
-                notificationsContent.style.display = 'none';
-            }
-        }
-    </script>
 </body>
 </html>
