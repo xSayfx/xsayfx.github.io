@@ -42,10 +42,7 @@ h1,
   background-color: #0a0a0a;
   color: #0a0a0a; 
 }
-.night-mode .modal-content {
-  background-color: #0a0a0a;
-  color: #eee; 
-}
+
 .night-mode .notifications-content {
   background-color: #0a0a0a;
   color: #eee; 
@@ -787,4 +784,12 @@ body.night-mode .notifications-tab.active .notifications-content {
 .mode-switch {
   font-size: 2.2em;  /* Adjust this value to match the desired size */
   padding: 8px 12px; /* Adjust this value if needed */
+}
+.night-mode .modal-content {
+  background-color: #0a0a0a;
+  color: #eee; 
+}
+.night-mode .more-info-modal-content, 
+.night-mode .more-info-modal-content p {
+  color: #eee !important; /* White text color for more info modal content in night mode */
 }
