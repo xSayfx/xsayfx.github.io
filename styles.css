@@ -191,6 +191,21 @@ h2, h3 {
   max-height: 90vh;
   overflow-y: auto;
   overflow: hidden;
+  position: relative; /* Make modal-content relative */
+}
+.dark-mode-toggle {
+  top: 15px;
+  left: 15px;
+}
+
+#notificationsTab {
+  top: 15px;
+  right: 15px;
+}
+.dark-mode-toggle,
+#notificationsTab {
+  position: absolute;
+  z-index: 1001; /* Ensure these are above the modal */
 }
 
 .close {
