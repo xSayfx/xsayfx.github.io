@@ -797,6 +797,6 @@ body.night-mode .notifications-tab.active .notifications-content {
   color: #eee !important; /* White text color for more info modal content in night mode */
 }
 .project-modal-image img {
-  max-width: 70%; /* Limit the maximum width of the image */
-  max-height: 60vh; /* Limit the maximum height of the image */
+  max-width: 90%; /* Limit the maximum width of the image */
+  max-height: 70vh; /* Limit the maximum height of the image */
 }
