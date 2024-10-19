@@ -155,3 +155,20 @@ function closeDownloadModal() {
 
 // Event listener for the notifications button
 document.querySelector('.notifications-button').addEventListener('click', toggleNotifications);
+
+const modeSwitch = document.querySelector('.mode-switch');
+const body = document.body;
+
+modeSwitch.addEventListener('click', () => {
+  // Check the current mode
+  if (body.classList.contains('night-mode')) {
+    // Switch to light mode
+    body.classList.remove('night-mode'); 
+    modeSwitch.innerHTML = '<i class="bi bi-brightness-high"></i>'; // Sun icon
+  } else {
+    // Switch to dark mode
+    body.classList.add('night-mode');
+    modeSwitch.innerHTML = '<i class="bi bi-moon-stars"></i>'; // Moon and stars icon
+  }
+});
+
