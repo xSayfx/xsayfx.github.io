@@ -13,7 +13,7 @@ const projects = {
     project3: {
         subject: "يجب تنزيل المشروع",
         info: "الطالب : سيف اسماعيل دياب | الفصل : 2/3 | التاريخ : 2024/10/5",
-        images: ["https://xsayfx.github.io/excel.png"],
+        images: ["https://xsayfx.github.io/excelclear.png"],
         download: "https://xsayfx.github.io/‪مشروع رقمية.xlsx",
     },
     project4: {
