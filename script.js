@@ -161,16 +161,24 @@ document.querySelector('.notifications-button').addEventListener('click', toggle
 const modeSwitch = document.querySelector('.mode-switch');
 const body = document.body;
 
+// تحقق من الوضع المحفوظ في localStorage عند تحميل الصفحة
+if (localStorage.getItem('mode') === 'night') {
+  body.classList.add('night-mode');
+  modeSwitch.innerHTML = '<i class="bi bi-moon-stars"></i>';
+}
+
 modeSwitch.addEventListener('click', () => {
   // Check the current mode
   if (body.classList.contains('night-mode')) {
     // Switch to light mode
-    body.classList.remove('night-mode'); 
-    modeSwitch.innerHTML = '<i class="bi bi-brightness-high"></i>'; // Sun icon
+    body.classList.remove('night-mode');
+    modeSwitch.innerHTML = '<i class="bi bi-brightness-high"></i>';
+    localStorage.setItem('mode', 'morning'); // Save morning mode
   } else {
     // Switch to dark mode
     body.classList.add('night-mode');
-    modeSwitch.innerHTML = '<i class="bi bi-moon-stars"></i>'; // Moon and stars icon
+    modeSwitch.innerHTML = '<i class="bi bi-moon-stars"></i>';
+    localStorage.setItem('mode', 'night'); // Save night mode
   }
 });
 
