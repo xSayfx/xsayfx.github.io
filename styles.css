@@ -202,6 +202,7 @@ h2, h3 {
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
+  z-index: 1001;
 }
 
 .night-mode .close:hover, .close:focus {
@@ -216,6 +217,7 @@ h2, h3 {
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
+  z-index: 1001;
 }
 
 .close:hover, .close:focus {
