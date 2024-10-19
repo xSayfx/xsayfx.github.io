@@ -644,7 +644,16 @@ body.night-mode .notifications-tab.active .notifications-content {
     font-size: 2.5rem;
     margin-bottom: 20px;
   }
-
+.night-mode #mainHeading {
+  /* أنماط دمج الألوان */
+  background: linear-gradient(135deg, #4100b3, #1d5263);
+   /* Dark mode background */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
   /* تنسيق الصندوق المنبثق لاختيار المعلم */
   .teacher-selection-modal {
     display: none;
