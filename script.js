@@ -31,7 +31,7 @@ const projects = {
  project6: {
         subject: "مشروع خاص لـ المعلم أ. أحمد عبدالله الغريبي",
         info: "الطالب : سيف اسماعيل دياب | الفصل : 2/3 | التاريخ : 2024/10/21",
-        images: ["https://xsayfx.github.io/islamic_1.png", "https://xsayfx.github.io/islamic_2.png", "https://xsayfx.github.io/islamic_3.png", "https://xsayfx.github.io/islamic_4.png"],
+        images: ["https://xsayfx.github.io/islamic_1.png", "https://xsayfx.github.io/islamic_2.png", "https://xsayfx.github.io/islamic_3.png", "https://xsayfx.github.io/islamic_4.png", "https://xsayfx.github.io/islamic_end.png"],
         download: "https://xsayfx.github.io/Islamic.zip",
     },
 };
