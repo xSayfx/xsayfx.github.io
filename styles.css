@@ -856,7 +856,7 @@ h1 {
 }
 
 .night-mode .student-info-modal-content {
-  background-color: black;
+  background-color: #0a0a0a;
   /* خلفية بيضاء للنافذة */
   padding: 20px;
   /* مسافة داخلية */
