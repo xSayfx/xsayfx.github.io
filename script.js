@@ -29,10 +29,10 @@ const projects = {
         download: "https://xsayfx.github.io/Calculator%20By%20Sayf.zip",
     },
  project6: {
-        subject: "مشروع خاص لـ أ. أحمد عبدالله الغريبي",
+        subject: "مشروع خاص لـ المعلم أ. أحمد عبدالله الغريبي",
         info: "الطالب : سيف اسماعيل دياب | الفصل : 2/3 | التاريخ : 2024/10/21",
-        images: ['https://xsayfx.github.io/islamic_1.png', 'https://xsayfx.github.io/islamic_2.png', 'https://xsayfx.github.io/islamic_3.png', 'https://xsayfx.github.io/islamic_4.png'],
-        download: "https://xsayfx.github.io/Islamic.zip",
+        images: ["https://xsayfx.github.io/islamic_1.png", "https://xsayfx.github.io/islamic_2.png", "https://xsayfx.github.io/islamic_3.png", "https://xsayfx.github.io/islamic_4.png"],
+        download: "https://xsayfx.github.io/Calculator%20By%20Sayf.zip",
     },
 };
 
@@ -61,35 +61,18 @@ function closeModal() {
     document.getElementById('modal').style.display = 'none';
 }
 
-function openModal(projectId) {
-    currentProject = projectId;
-    currentImageIndex = 0; // Reset to the first image when opening modal
-    const project = projects[projectId];
-
-    // Display the first image in the array
-    document.getElementById('modal-image').src = project.images[currentImageIndex];
-    document.getElementById('modal').style.display = 'flex';
-}
-
 function changeImage(direction) {
     const project = projects[currentProject];
-    const totalImages = project.images.length;
-
-    // Update the image index based on direction
     currentImageIndex += direction;
 
-    // Wrap around if the index goes out of bounds
     if (currentImageIndex < 0) {
-        currentImageIndex = totalImages - 1; // Last image
-    } else if (currentImageIndex >= totalImages) {
-        currentImageIndex = 0; // First image
+        currentImageIndex = project.images.length - 1;
+    } else if (currentImageIndex >= project.images.length) {
+        currentImageIndex = 0;
     }
 
-    // Update the modal image to reflect the new index
     document.getElementById('modal-image').src = project.images[currentImageIndex];
 }
-
-
 
 function openMoreInfo() {
     const project = projects[currentProject];
@@ -133,7 +116,6 @@ function downloadProject() {
 
 // Notifications handling
 const notifications = {
-    ntf11: { name: "اشعار", details: "تم اضافة مشروع لمادة الاسلاميات", date: "2024-10-21" },
     ntf10: { name: "تحديث", details: "تم تعديل وتحسين الواجهة في صفحة التنزيلات", date: "2024-10-19 | v1.53" },
     ntf9: { name: "تحديث", details: "تم تحسين واجهة المستخدم", date: "2024-10-18 | v1.52" },
     ntf8: { name: "تحديث", details: "تم اضافة وضع ليلي, وتم تحسين واجهة المستخدم", date: "2024-10-18 | v1.51" },
@@ -206,4 +188,3 @@ modeSwitch.addEventListener('click', () => {
     localStorage.setItem('mode', 'night'); // Save night mode
   }
 });
-
