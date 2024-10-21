@@ -62,13 +62,23 @@ function closeModal() {
 }
 
 function changeImage(direction) {
-  const project = projects[currentProject];
+    const project = projects[currentProject];
+    const totalImages = project.images.length;
+    
+    // Move to the next or previous image based on direction
+    currentImageIndex += direction;
 
-  // تحديث  `currentImageIndex`  بناءً على  `direction`
-  currentImageIndex = (currentImageIndex + direction + project.images.length) % project.images.length;
+    // Ensure it wraps around properly
+    if (currentImageIndex < 0) {
+        currentImageIndex = totalImages - 1; // Go to the last image
+    } else if (currentImageIndex >= totalImages) {
+        currentImageIndex = 0; // Go back to the first image
+    }
 
-  document.getElementById('modal-image').src = project.images[currentImageIndex];
+    // Update the modal image source
+    document.getElementById('modal-image').src = project.images[currentImageIndex];
 }
+
 
 function openMoreInfo() {
     const project = projects[currentProject];
