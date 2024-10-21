@@ -62,16 +62,17 @@ function closeModal() {
 }
 
 function changeImage(direction) {
-    const project = projects[currentProject];
-    currentImageIndex += direction;
+  const project = projects[currentProject];
+  currentImageIndex += direction;
 
-    if (currentImageIndex < 0) {
-        currentImageIndex = project.images.length - 1;
-    } else if (currentImageIndex >= project.images.length) {
-        currentImageIndex = 0;
-    }
+  // تحقق من أن الفهرس لا يتجاوز حدود  `images`
+  if (currentImageIndex < 0) {
+    currentImageIndex = project.images.length - 1;
+  } else if (currentImageIndex >= project.images.length) {
+    currentImageIndex = 0;
+  }
 
-    document.getElementById('modal-image').src = project.images[currentImageIndex];
+  document.getElementById('modal-image').src = project.images[currentImageIndex];
 }
 
 function openMoreInfo() {
