@@ -107,7 +107,7 @@ function downloadProject() {
         document.body.removeChild(link);
 
         setTimeout(() => {
-            window.location.href = "download.html";
+            window.location.href = "download";
         }, 500);
     } else {
         alert("لا يوجد رابط تنزيل لهذا المشروع.");
