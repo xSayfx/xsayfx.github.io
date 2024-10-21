@@ -36,7 +36,7 @@
     let downloadTimer = setInterval(function() {
       if (timeleft <= 0) {
         clearInterval(downloadTimer);
-        window.location.href = 'index.html';
+        window.location.href = 'index';
       } else {
         document.getElementById("countdown").innerHTML = "سيتم توجيهك للصفحة الرئيسية تلقائياً بعد <span>" + timeleft + "</span> ثانية";
       }
