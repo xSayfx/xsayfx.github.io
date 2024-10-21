@@ -61,23 +61,34 @@ function closeModal() {
     document.getElementById('modal').style.display = 'none';
 }
 
+function openModal(projectId) {
+    currentProject = projectId;
+    currentImageIndex = 0; // Reset to the first image when opening modal
+    const project = projects[projectId];
+
+    // Display the first image in the array
+    document.getElementById('modal-image').src = project.images[currentImageIndex];
+    document.getElementById('modal').style.display = 'flex';
+}
+
 function changeImage(direction) {
     const project = projects[currentProject];
     const totalImages = project.images.length;
-    
-    // Move to the next or previous image based on direction
+
+    // Update the image index based on direction
     currentImageIndex += direction;
 
-    // Ensure it wraps around properly
+    // Wrap around if the index goes out of bounds
     if (currentImageIndex < 0) {
-        currentImageIndex = totalImages - 1; // Go to the last image
+        currentImageIndex = totalImages - 1; // Last image
     } else if (currentImageIndex >= totalImages) {
-        currentImageIndex = 0; // Go back to the first image
+        currentImageIndex = 0; // First image
     }
 
-    // Update the modal image source
+    // Update the modal image to reflect the new index
     document.getElementById('modal-image').src = project.images[currentImageIndex];
 }
+
 
 
 function openMoreInfo() {
