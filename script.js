@@ -34,6 +34,12 @@ const projects = {
         images: ["https://xsayfx.github.io/islamic_1.png", "https://xsayfx.github.io/islamic_2.png", "https://xsayfx.github.io/islamic_3.png", "https://xsayfx.github.io/islamic_4.png", "https://xsayfx.github.io/islamic_end.png"],
         download: "https://xsayfx.github.io/Islamic.zip",
     },
+project7: {
+        subject: "مشروع خاص لـ المعلم أ. مشبب السبيعي",
+        info: "الطالب : سيف اسماعيل دياب | الفصل : 2/3 | التاريخ : 2024/12/27",
+        images: ["https://xsayfx.github.io/1.png", "https://xsayfx.github.io/2.png", "https://xsayfx.github.io/3.png", "https://xsayfx.github.io/4.png"],
+        download: "https://xsayfx.github.io/math7.zip",
+    },
 };
 
 let currentProject = '';
