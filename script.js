@@ -122,6 +122,7 @@ function downloadProject() {
 
 // Notifications handling
 const notifications = {
+    ntf13: { name: "تحديث", details: "تم اجراء تعديلات بسيطة", date: "2025-1-17 | v1.55" },
     ntf12: { name: "اشعار", details: "تم اضافة مشروع لمادة الرياضيات", date: "2024-12-27 | v1.54.1" },
     ntf11: { name: "اشعار", details: "تم اضافة مشروع خاص لمادة الاسلاميات", date: "2024-10-21 | v1.54" },
     ntf10: { name: "تحديث", details: "تم تعديل وتحسين الواجهة في صفحة التنزيلات", date: "2024-10-19 | v1.53" },
