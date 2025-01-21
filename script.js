@@ -40,6 +40,12 @@ project7: {
         images: ["https://xsayfx.github.io/1.png", "https://xsayfx.github.io/2.png", "https://xsayfx.github.io/3.png", "https://xsayfx.github.io/4.png"],
         download: "https://xsayfx.github.io/math7.zip",
     },
+project8: {
+        subject: "مشروع خاص لـ أ. ماجد النفيعي",
+        info: "الطالب : سيف اسماعيل دياب | الفصل : 2/3 | التاريخ : 2025/1/21",
+        images: ["https://xsayfx.github.io/h1.png", "https://xsayfx.github.io/h2.png", "https://xsayfx.github.io/h3.png"],
+        download: "https://xsayfx.github.io/human_stages.zip",
+    },
 };
 
 let currentProject = '';
@@ -122,6 +128,7 @@ function downloadProject() {
 
 // Notifications handling
 const notifications = {
+    ntf14: { name: "تحديث", details: "تم اضافة مشروع خاص لـ أ. ماجد النفيعي", date: "2025-1-21 | v1.55.1" },
     ntf13: { name: "تحديث", details: "تم اجراء تعديلات بسيطة", date: "2025-1-17 | v1.55" },
     ntf12: { name: "اشعار", details: "تم اضافة مشروع لمادة الرياضيات", date: "2024-12-27 | v1.54.1" },
     ntf11: { name: "اشعار", details: "تم اضافة مشروع خاص لمادة الاسلاميات", date: "2024-10-21 | v1.54" },
